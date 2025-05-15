@@ -59,17 +59,6 @@
                         <li class="list-group-item"><strong>Language:</strong> {{ book.volumeInfo.language | uppercase
                             }}</li>
                     </ul>
-
-                    <!-- <div class="d-flex gap-2 mt-3">
-            <a [href]="book.volumeInfo.previewLink" class="btn btn-outline-primary" target="_blank">Preview</a>
-            <a [href]="book.volumeInfo.infoLink" class="btn btn-outline-secondary" target="_blank">More Info</a>
-            <a *ngIf="book.accessInfo.pdf?.isAvailable"
-               [href]="book.accessInfo.pdf.acsTokenLink"
-               class="btn btn-success"
-               target="_blank">
-              Download PDF Sample
-            </a>
-          </div> -->
                     <div class="container my-4">
                         <div class="row g-3 text-center">
                             <div class="col-12 col-md-4">

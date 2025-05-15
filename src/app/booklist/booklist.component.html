@@ -128,27 +128,8 @@
         </ul>
         <span class="loadclass">Fetching..</span>
       </div>
-    </div>
+  </div>
 
-  <!-- <header id="header" class="site-header">
-
-    <div class="top-info border-bottom d-none d-md-block ">
-      <div class="container-fluid">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <p class="fs-6 my-2 text-center">Need any help? Call us <a href="#">112233344455</a></p>
-          </div>
-          <div class="col-md-4 border-start border-end">
-            <p class="fs-6 my-2 text-center">Summer sale discount off 60% off! <a class="text-decoration-underline"
-                >Shop Now</a></p>
-          </div>
-          <div class="col-md-4">
-            <p class="fs-6 my-2 text-center">2-3 business days delivery & free returns</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header> -->
 
   <section id="billboard" class="position-relative d-flex align-items-center py-5 bg-light-gray"
     style="background-image: url(../assets/images/banner-image-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 500px;">
@@ -198,9 +179,10 @@
     </div>
 
   </section>
-
+   
    <form [formGroup]="BooklistForm">
-    <div class="input-group mb-3 mt-5 p-2">
+    <h4 class="d-flex align-items-center mt-5 margin-left-20">Search Books Below....</h4>
+    <div class="input-group mb-3 mt-1 p-3">
       <input type="text" class="form-control h-62" formControlName="searchbook" placeholder="Search Books...">
       <button class="btn btn-outline-secondary h-62" (click)="getbooklist()" type="button"><svg class="search size-search">
           <use xlink:href="#search"></use>
@@ -211,20 +193,15 @@
 
 
   <section id="best-selling-items" class="position-relative">
-    <div class="container">
+    <div class="container-fluid">
       <div *ngIf="boolistarr.length > 0" class="section-title d-md-flex justify-content-between align-items-center mb-4">
         <h3 class="d-flex align-items-center">Book List</h3>
-        <!-- <a class="btn">View All</a> -->
       </div>
 
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let item of boolistarr">
-          <!-- <div class="card h-100"> -->
             <div class="card-body cursor-pointer" (click)="getbookdetails(item)">
               <div class="card position-relative p-4 border rounded-3">
-                <!-- <div class="position-absolute">
-                  <p class="bg-primary py-1 px-3 fs-6 text-white rounded-2">10% off</p>
-                </div> -->
                 <img [src]="item.volumeInfo.imageLinks?.thumbnail" class="img-fluid shadow-sm" alt="product item">
                 <h6 class="mt-4 mb-0 fw-bold"><a >{{item.volumeInfo.title}}</a></h6>
                 <div class="review-content d-flex">
@@ -248,23 +225,20 @@
                     </svg>
                   </div>
                 </div>
-                <!-- <span class="price text-primary fw-bold mb-2 fs-5">Rs.{{item.saleInfo.listPrice.amount ? item.saleInfo.listPrice.amount : '0'}}</span> -->
               </div>
             </div>
-          <!-- </div> -->
         </div>
       </div>
     </div>
   </section>
-
-  <footer id="footer" class="padding-large">
-    <div class="container">
+ <hr>
+  <footer id="footer" class="padding-small">
+    <div class="container-fluid">
       <div class="row">
         <div class="footer-top-area">
           <div class="row d-flex flex-wrap justify-content-between">
             <div class="col-lg-3 col-sm-6 pb-3">
               <div class="footer-menu">
-                <!-- <img src="../assets/images/main-logo.png" alt="logo" class="img-fluid mb-2"> -->
                 <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio
                   erat nullam fringilla.</p>
                 <div class="social-links">
@@ -356,9 +330,7 @@
               <div class="footer-menu contact-item">
                 <h5 class="widget-title text-capitalize pb-2">Contact Us</h5>
                 <p>Do you have any queries or suggestions? <a href="mailto:"
-                    class="text-decoration-underline">yourinfogmail.com</a></p>
-                <p>If you need support? Just give us a call. <a href="#" class="text-decoration-underline">+55 111 222
-                    333 44</a></p>
+                    class="text-decoration-underline">booklistgmail.com</a></p>
               </div>
             </div>
           </div>
@@ -386,11 +358,6 @@
               <img src="../assets/images/paypal.jpg" alt="paypal">
             </div>
           </div>
-        </div>
-        <div class="copyright">
-          <p>© Copyright 2024 Booklist. HTML Template by <a href="https://templatesjungle.com/"
-              target="_blank">TemplatesJungle</a>
-          </p>
         </div>
       </div>
     </div>
