@@ -1,0 +1,20 @@
+.size-search
+{
+    height: 32px;
+    width: 50px;
+}
+
+.h-62
+{
+    height:62px;
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
+}
+
+.h-500
+{
+    height: 500px !important;
+}
